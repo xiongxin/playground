@@ -1,0 +1,10 @@
+(executable
+ (name freq)
+ (modules freq counter)
+ (libraries base stdio core_kernel))
+
+
+(executable
+ (name session_info)
+ (modules session_info)
+ (libraries base core_kernel))
