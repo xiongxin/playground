@@ -124,3 +124,5 @@ fun findroot (a, x, acc) =
     end;
 
 fun sqroot a = findroot(a, 1.0, 10E~10);
+
+sqroot 2.0;
