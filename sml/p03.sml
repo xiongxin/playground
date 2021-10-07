@@ -47,4 +47,12 @@ fun findBinary(decimal, result)=
   else findBinary(decimal div 2, 
     Int.toString(decimal mod 2) ^ result);
 
-findBinary(4, "");
+findBinary(233, "");
+
+(* sum of natural numbers *)
+fun recursionSummation i =
+  if i < 1 orelse i = 1 then i
+                        else i + recursionSummation(i - 1);
+
+recursionSummation(10);
+
