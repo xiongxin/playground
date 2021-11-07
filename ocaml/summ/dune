@@ -1,0 +1,3 @@
+(executable
+ (name summ)
+ (libraries base stdio))

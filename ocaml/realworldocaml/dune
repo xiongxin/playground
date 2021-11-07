@@ -1,0 +1,8 @@
+(executables
+ (names chapter5_records 
+        chapter6_variants
+        chapter6_variants2
+        chapter6_variants3)
+ (libraries core base stdio re)
+ (preprocess
+  (pps ppx_fields_conv)))

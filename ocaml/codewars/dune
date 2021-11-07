@@ -1,0 +1,3 @@
+(executables
+ (names two_to_one two_to_one2)
+ (libraries base stdio))
