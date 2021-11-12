@@ -1,8 +1,14 @@
 (executables
- (names chapter5_records 
+ (names freq
+        chapter5_records 
         chapter6_variants
         chapter6_variants2
-        chapter6_variants3)
+        chapter6_variants3
+        chapter7_error_handling
+        increment
+        intervals
+        chapter8
+        first_class_modules)
  (libraries core base stdio re)
  (preprocess
   (pps ppx_fields_conv)))

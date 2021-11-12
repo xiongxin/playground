@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3DpXhGT+RrR9ClPGYICi/lHkrodta9FAFzqjGy3p/gvAeY51Z2nbH7wBrRXERdXSx3yRUkNz1VHSwPT0FFmKJQ==",
+  "success": true,
+  "projectFilePath": "/home/xiongxin/Data/Code/playground/fsharp/FirstIonideProject/FirstIonideProject.fsproj",
+  "expectedPackageFiles": [
+    "/home/xiongxin/.nuget/packages/fsharp.core/6.0.1/fsharp.core.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

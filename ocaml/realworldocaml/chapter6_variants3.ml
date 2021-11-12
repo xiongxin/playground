@@ -24,7 +24,7 @@ let test field contains = Base { field; contains }
 
 let rec eval expr base_eval =
   (* a shortcut, so we don't need to repeatedly pass [base_eval]
-    explicitly to [eval] *)
+     explicitly to [eval] *)
   let eval' expr = eval expr base_eval in
   match expr with
   | Base base -> base_eval base
@@ -70,7 +70,8 @@ let or_ l =
 
 let not_ = function
   | Const b -> Const (not b)
-  | e -> Not e
+  | Not e -> e
+  | (Base _ | And _ | Or _) as e -> Not e
 ;;
 
 let rec simplify = function
@@ -80,4 +81,23 @@ let rec simplify = function
   | Not e -> not_ (simplify e)
 ;;
 
-let () = print_endline "Hello World"
+let base_eval_string s = String.length s > 0
+
+let () =
+  print_endline
+    (Bool.to_string
+       (eval
+          (simplify
+             (Not (And [ Or [ Base "it's snowing"; Const true ]; Base "it's raining" ])))
+          base_eval_string));
+  print_endline
+    (Bool.to_string
+       (eval
+          (simplify
+             (Not
+                (And
+                   [ Or [ Base "it's snowing"; Const true ]
+                   ; Not (Not (Base "it's raining"))
+                   ])))
+          base_eval_string))
+;;

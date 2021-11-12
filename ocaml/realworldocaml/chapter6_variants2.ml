@@ -52,10 +52,10 @@ let messages_for_user user (messages : (Common.t * details) list) =
 ;;
 
 (* let handle_message server_state ((common : Common.t), details) =
-  match details with
-  | Log_entry m -> handle_log_entry server_state (common, m)
-  | Logon m -> handle_logon server_state (common, m)
-  | Heartbeat m -> handle_heartbeat server_state (common, m)
-;; *)
+     match details with
+     | Log_entry m -> handle_log_entry server_state (common, m)
+     | Logon m -> handle_logon server_state (common, m)
+     | Heartbeat m -> handle_heartbeat server_state (common, m)
+   ;; *)
 
 let () = print_endline "Hello World"
