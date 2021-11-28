@@ -11,4 +11,4 @@
         first_class_modules)
  (libraries core base stdio re)
  (preprocess
-  (pps ppx_fields_conv)))
+  (pps ppx_jane)))
