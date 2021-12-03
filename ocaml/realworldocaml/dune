@@ -7,8 +7,25 @@
         chapter7_error_handling
         increment
         intervals
+        intervals_v2
         chapter8
-        first_class_modules)
- (libraries core base stdio re)
+        first_class_modules
+        first_class_modules_v2
+        query_handling
+        error_v2
+        little_lang
+        little_lang_gadt
+        little_lang_type_safe
+        variants1
+        variants3
+        json1
+        json2
+        lexer1
+        )
+ (libraries core base stdio re yojson)
  (preprocess
+<<<<<<< Updated upstream
   (pps ppx_jane)))
+=======
+  (pps ppx_jane ppx_let)))
+>>>>>>> Stashed changes
