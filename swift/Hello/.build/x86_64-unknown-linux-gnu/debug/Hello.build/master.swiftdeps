@@ -1,0 +1,6 @@
+version: "Swift version 5.5.1 (swift-5.5.1-RELEASE)"
+options: "8ef5046fbbd1600d3acfa786da61fd8406f925629add4420526302146e4e0aa2"
+build_start_time: [1637376830, 27471065]
+build_end_time: [1637376831, 474164962]
+inputs:
+  "/home/xiongxin/Data/Code/playground/swift/Hello/Sources/Hello/main.swift": [1637376808, 878525257]

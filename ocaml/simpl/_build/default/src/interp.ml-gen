@@ -1,0 +1,14 @@
+(** @canonical Interp.Ast *)
+module Ast = Interp__Ast
+
+
+(** @canonical Interp.Lexer *)
+module Lexer = Interp__Lexer
+
+
+(** @canonical Interp.Main *)
+module Main = Interp__Main
+
+
+(** @canonical Interp.Parser *)
+module Parser = Interp__Parser

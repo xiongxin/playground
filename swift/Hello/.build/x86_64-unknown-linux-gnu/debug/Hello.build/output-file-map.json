@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/master.swiftdeps"
+  },
+  "/home/xiongxin/Data/Code/playground/swift/Hello/Sources/Hello/main.swift": {
+    "dependencies": "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.d",
+    "object": "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.swift.o",
+    "swiftmodule": "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main~partial.swiftmodule",
+    "swift-dependencies": "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.swiftdeps"
+  }
+}

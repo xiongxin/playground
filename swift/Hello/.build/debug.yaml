@@ -1,0 +1,139 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "Hello-debug.exe": ["<Hello-debug.exe>"]
+  "Hello-debug.module": ["<Hello-debug.module>"]
+  "HelloPackageTests-debug.module": ["<HelloPackageTests-debug.module>"]
+  "HelloPackageTests-debug.test": ["<HelloPackageTests-debug.test>"]
+  "HelloTests-debug.module": ["<HelloTests-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<Hello-debug.exe>","<Hello-debug.module>"]
+  "test": ["<Hello-debug.exe>","<Hello-debug.module>","<HelloPackageTests-debug.test>","<HelloTests-debug.module>"]
+default: "main"
+nodes:
+  "/home/xiongxin/Data/Code/playground/swift/Hello/Sources/Hello/":
+    is-directory-structure: true
+  "/home/xiongxin/Data/Code/playground/swift/Hello/Tests/HelloTests/":
+    is-directory-structure: true
+commands:
+  "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/Hello.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.swiftmodule"]
+    outputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/Hello.swiftmodule.o"]
+    description: "Wrapping AST for Hello for debugging"
+    args: ["/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc","-modulewrap","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.swiftmodule","-o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/Hello.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloPackageTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.swiftmodule"]
+    outputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloPackageTests.swiftmodule.o"]
+    description: "Wrapping AST for HelloPackageTests for debugging"
+    args: ["/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc","-modulewrap","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.swiftmodule","-o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloPackageTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/main.swift":
+    tool: test-discovery-tool
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swift.o"]
+    outputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/HelloTests.swift","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/main.swift"]
+
+  "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.swiftmodule"]
+    outputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swiftmodule.o"]
+    description: "Wrapping AST for HelloTests for debugging"
+    args: ["/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc","-modulewrap","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.swiftmodule","-o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "<Hello-debug.exe>":
+    tool: phony
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello"]
+    outputs: ["<Hello-debug.exe>"]
+
+  "<Hello-debug.module>":
+    tool: phony
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.swiftmodule"]
+    outputs: ["<Hello-debug.module>"]
+
+  "<HelloPackageTests-debug.module>":
+    tool: phony
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloTests.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/main.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.swiftmodule"]
+    outputs: ["<HelloPackageTests-debug.module>"]
+
+  "<HelloPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.xctest"]
+    outputs: ["<HelloPackageTests-debug.test>"]
+
+  "<HelloTests-debug.module>":
+    tool: phony
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.swiftmodule"]
+    outputs: ["<HelloTests-debug.module>"]
+
+  "C.Hello-debug.exe":
+    tool: shell
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/Hello.swiftmodule.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.swift.o"]
+    outputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello"]
+    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/Hello"
+    args: ["/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc","-L","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug","-o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello","-module-name","Hello","-emit-executable","-Xlinker","--defsym","-Xlinker","main=Hello_main","-Xlinker","-rpath=$ORIGIN","@/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-L","/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/lib"]
+
+  "C.Hello-debug.module":
+    tool: swift-compiler
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/Sources/Hello/main.swift"]
+    outputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.swiftmodule"]
+    executable: "/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc"
+    module-name: "Hello"
+    module-output-path: "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.swiftmodule"
+    import-paths: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug"]
+    temps-path: "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build"
+    objects: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.swift.o"]
+    other-args: ["-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","Hello_main","-color-diagnostics"]
+    sources: ["/home/xiongxin/Data/Code/playground/swift/Hello/Sources/Hello/main.swift"]
+    is-library: false
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.HelloPackageTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/HelloTests.swift","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/main.swift","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.swiftmodule"]
+    outputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloTests.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/main.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.swiftmodule"]
+    executable: "/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc"
+    module-name: "HelloPackageTests"
+    module-output-path: "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.swiftmodule"
+    import-paths: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug"]
+    temps-path: "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build"
+    objects: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloTests.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/main.swift.o"]
+    other-args: ["-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-color-diagnostics"]
+    sources: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/HelloTests.swift","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/main.swift"]
+    is-library: false
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.HelloPackageTests-debug.test":
+    tool: shell
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/Hello.swiftmodule.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloPackageTests.swiftmodule.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloTests.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/main.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swiftmodule.o"]
+    outputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.xctest"]
+    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.xctest"
+    args: ["/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc","-L","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug","-o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.xctest","-module-name","HelloPackageTests","-emit-executable","-Xlinker","-rpath=$ORIGIN","@/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-L","/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/lib"]
+
+  "C.HelloTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/Tests/HelloTests/HelloTests.swift","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello"]
+    outputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swift.o","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.swiftmodule"]
+    executable: "/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc"
+    module-name: "HelloTests"
+    module-output-path: "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.swiftmodule"
+    import-paths: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug"]
+    temps-path: "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build"
+    objects: ["/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swift.o"]
+    other-args: ["-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics"]
+    sources: ["/home/xiongxin/Data/Code/playground/swift/Hello/Tests/HelloTests/HelloTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/home/xiongxin/Data/Code/playground/swift/Hello/Sources/Hello/","/home/xiongxin/Data/Code/playground/swift/Hello/Tests/HelloTests/","/home/xiongxin/Data/Code/playground/swift/Hello/Package.swift","/home/xiongxin/Data/Code/playground/swift/Hello/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

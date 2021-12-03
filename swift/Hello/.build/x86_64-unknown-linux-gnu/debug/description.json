@@ -1,0 +1,209 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.xctest",
+      "productName" : "HelloPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "swiftCommands" : {
+    "C.Hello-debug.module" : {
+      "executable" : "/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc",
+      "importPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/Sources/Hello/main.swift"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "Hello",
+      "moduleOutputPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.swiftmodule",
+      "objects" : [
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "Hello_main",
+        "-color-diagnostics"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/home/xiongxin/Data/Code/playground/swift/Hello/Sources/Hello/main.swift"
+      ],
+      "tempsPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.HelloPackageTests-debug.module" : {
+      "executable" : "/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc",
+      "importPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/HelloTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.swiftmodule"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "HelloPackageTests",
+      "moduleOutputPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.swiftmodule",
+      "objects" : [
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloTests.swift.o",
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-color-diagnostics"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/HelloTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/HelloTests.swift",
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/main.swift"
+      ],
+      "tempsPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.HelloTests-debug.module" : {
+      "executable" : "/home/xiongxin/Data/Application/swift-5.5.1-RELEASE-ubuntu20.04/usr/bin/swiftc",
+      "importPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/Tests/HelloTests/HelloTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/Hello"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "HelloTests",
+      "moduleOutputPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.swiftmodule",
+      "objects" : [
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/home/xiongxin/Data/Code/playground/swift/Hello/Tests/HelloTests/HelloTests.swift"
+      ],
+      "tempsPath" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "testDiscoveryCommands" : {
+    "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/main.swift" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloTests.build/HelloTests.swift.o"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/HelloTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/xiongxin/Data/Code/playground/swift/Hello/.build/x86_64-unknown-linux-gnu/debug/HelloPackageTests.derived/main.swift"
+        }
+      ]
+    }
+  }
+}

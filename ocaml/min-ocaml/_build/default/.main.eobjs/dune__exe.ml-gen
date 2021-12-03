@@ -1,0 +1,6 @@
+(** @canonical Dune__exe.Inline *)
+module Inline = Dune__exe__Inline
+
+
+(** @canonical Dune__exe.Main *)
+module Main = Dune__exe__Main
