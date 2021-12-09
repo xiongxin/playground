@@ -10,7 +10,7 @@ let id = letter+
 
 rule read = 
   parse
-  | white { read lexbuf }
+  | white { read lexbuf } (* white继续执行read规则，跳过white *)
   | "true" { TRUE }
   | "false" { FALSE }
   | "<=" { LEQ }

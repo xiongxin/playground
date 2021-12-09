@@ -2,7 +2,7 @@
   open Ast
 %}
 
-
+/* 定义token类型 */
 %token <int> INT
 %token <string> ID
 %token TRUE
@@ -35,7 +35,7 @@ prog:
   | e = expr; EOF { e }
   ;
 expr:
-  | i = INT { Int i }
+  | i = INT { Int i } /* bing the resulting OCaml int value to i */
   | x = ID { Var x }
   | TRUE { Bool true }
   | FALSE { Bool false }
