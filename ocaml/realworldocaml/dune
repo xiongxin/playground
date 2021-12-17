@@ -24,8 +24,4 @@
         )
  (libraries core base stdio re yojson)
  (preprocess
-<<<<<<< Updated upstream
-  (pps ppx_jane)))
-=======
   (pps ppx_jane ppx_let)))
->>>>>>> Stashed changes
