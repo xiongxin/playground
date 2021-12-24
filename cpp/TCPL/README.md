@@ -48,3 +48,27 @@ int i3 = {7.2};     // error : floating-point to integer conversion (the = is re
 
 **Functions defined in a class are inlined by default. **
 
+**virtual** means "may be redefined later in a class derived from this one."
+`=0` syntax says the function is pure virtual; that is, some class derived
+from `Container` must define the function. A class with a pure virtual function
+is called an abstract class.
+
+虚方法调用，调用者仅仅需要知道父类的`vtbl`的指针位置，索引调用每个虚方法。
+
+**Resource handle**带有指针的对象
+
+**this** is predefined in a member function and points to the object for which the member
+function is called.
+
+**&&** means "rvalue reference" and is a reference to which we can bind an rvalue.
+
+#### Copy and Move
+
+```c++
+void test(complex z1)
+{
+    complex z2 {z1}; // copy initialization
+    complex z3;
+    z3 = z2; // copy assignment
+}
+```
