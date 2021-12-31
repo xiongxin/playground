@@ -61,6 +61,11 @@ is called an abstract class.
 function is called.
 
 **&&** means "rvalue reference" and is a reference to which we can bind an rvalue.
+**lvalue** means "something that can appear on the left-hand side of an assignment."
+So an rvalue is - to a first approximation - a value that you can't assign to,
+such as an integer returned by a function call, and an rvalue reference is a 
+reference to something that nobody else can assign to. The `res` ocal variable
+in `operator+()` for `Vector`s is an example.
 
 #### Copy and Move
 
@@ -71,4 +76,21 @@ void test(complex z1)
     complex z3;
     z3 = z2; // copy assignment
 }
+
+
+Vector f()
+{
+    Vector x(1000);
+    Vector y(1000);
+    Vector z(1000);
+    // ...
+    z = x;             // we get a copy
+    y = std::move(x);  // we get a move
+    // ...
+    return z;          // we get a move
+};
+
 ```
+
+**move** 资源转移到新的数据上，避免复制操作。
+
