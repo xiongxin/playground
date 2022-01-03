@@ -1,4 +1,0 @@
-root = true
-
-[*]
-dfmt_brace_style = stroustrup
