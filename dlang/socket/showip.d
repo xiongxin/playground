@@ -21,6 +21,7 @@ void main(string[] args) {
   memset(&hints, 0, hints.sizeof);
   hints.ai_family = AF_UNSPEC;
   hints.ai_socktype = SOCK_STREAM;
+  hints.ai_flags = AI_CANONNAME;
 
   if ((status = getaddrinfo(cast(char*) args[1], null, &hints, &res)) != 0) {
     writeln("getaddinfo: ", gai_strerror(status));
