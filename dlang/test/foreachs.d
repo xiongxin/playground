@@ -24,9 +24,27 @@ struct NumberRange {
   }
 }
 
+struct NumberRange2 {
+  int begin;
+  int end;
+
+  int opApply(int delegate(ref int) operations) const {
+    int result = 0;
+
+    for (int number = begin; number != end; ++number) {
+      result = operations(number);
+      writeln("result = ", result);
+      if (result)
+        break;
+    }
+
+    return result;
+  }
+}
+
 void main(string[] args) {
   auto s = "这是一行中文12";
-  foreach (c; stride(s, 2)) {
+  foreach (c; stride(s, 1)) {
     writeln(c);
   }
 
@@ -34,4 +52,8 @@ void main(string[] args) {
     write(e, ' ');
   }
   writeln();
+
+  foreach (element; NumberRange2(3, 7)) {
+    write(element, ' ');
+  }
 }
