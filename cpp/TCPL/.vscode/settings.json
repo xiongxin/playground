@@ -1,5 +1,5 @@
 {
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "files.associations": {
     "iostream": "cpp",
     "iosfwd": "cpp",
@@ -49,6 +49,15 @@
     "set": "cpp",
     "thread": "cpp",
     "condition_variable": "cpp",
-    "mutex": "cpp"
+    "mutex": "cpp",
+    "chrono": "cpp",
+    "codecvt": "cpp",
+    "compare": "cpp",
+    "concepts": "cpp",
+    "ctime": "cpp",
+    "ratio": "cpp",
+    "iomanip": "cpp",
+    "numbers": "cpp",
+    "filesystem": "cpp"
   }
 }
