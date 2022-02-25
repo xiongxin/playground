@@ -94,3 +94,9 @@ Vector f()
 
 **move** 资源转移到新的数据上，避免复制操作。
 
+## Constant Expressions
+
+CPP offers two related meaning of "constant":
+- constexpr: Evaluate at compile time
+- const: Do not modify in this scope
+
