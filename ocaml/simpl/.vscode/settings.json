@@ -1,7 +1,0 @@
-{
-    "editor.tabSize": 2,
-    "ocaml.sandbox": {
-        "kind": "opam",
-        "switch": "4.12.0"
-    }
-}

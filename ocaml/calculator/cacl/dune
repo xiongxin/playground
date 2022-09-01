@@ -1,7 +1,0 @@
-(library
- (name cacl))
-
-(menhir
- (modules parser))
-
-(ocamllex lexer)

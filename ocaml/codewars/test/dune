@@ -1,3 +1,0 @@
-(executables
- (names sum_test)
- (libraries base stdio ounit2 codewars))

@@ -1,8 +1,0 @@
-(executable
- (name main)
- (libraries core))
-
-(menhir
- (modules parser))
-
-(ocamllex lexer)

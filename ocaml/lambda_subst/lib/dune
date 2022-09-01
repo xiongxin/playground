@@ -1,7 +1,0 @@
-(library
- (name lambda_subst))
-
-(menhir
- (modules parser))
-
-(ocamllex lexer)

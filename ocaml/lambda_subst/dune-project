@@ -1,3 +1,0 @@
-(lang dune 2.9)
-(name lambda_subst)
-(using menhir 2.1)

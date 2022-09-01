@@ -1,3 +1,0 @@
-(library
- (name codewars)
- (libraries base stdio ounit2))

@@ -1,0 +1,9 @@
+(executable
+ (name md5_cmd)
+ (libraries
+  core
+  core_unix.command_unix
+  core_unix.sys_unix
+  core_unix.filename_unix)
+ (preprocess
+  (pps ppx_jane)))
