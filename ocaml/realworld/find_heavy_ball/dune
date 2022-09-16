@@ -1,0 +1,3 @@
+(executable
+ (name find_heavy_ball)
+ (libraries batteries))
