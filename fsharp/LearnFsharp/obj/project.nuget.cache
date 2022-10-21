@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rcQ9/LvD0u54r9RtV7t4BRRmhhNv972twAVmVzAPl6TWiTmVZhGV0NMmUsavaSt2/MUKGOwNgQFaYYxP+1iOTA==",
+  "success": true,
+  "projectFilePath": "/home/xiongxin/Data/Code/playground/fsharp/LearnFsharp/LearnFsharp.fsproj",
+  "expectedPackageFiles": [
+    "/home/xiongxin/.nuget/packages/fsharp.core/6.0.1/fsharp.core.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

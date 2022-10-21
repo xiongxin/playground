@@ -19,6 +19,8 @@
     "concepts": "cpp",
     "cstdint": "cpp",
     "deque": "cpp",
+    "list": "cpp",
+    "map": "cpp",
     "string": "cpp",
     "unordered_map": "cpp",
     "vector": "cpp",
@@ -43,10 +45,11 @@
     "new": "cpp",
     "numbers": "cpp",
     "ostream": "cpp",
+    "sstream": "cpp",
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "cinttypes": "cpp",
-    "typeinfo": "cpp"
-  },
-  "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools"
+    "typeinfo": "cpp",
+    "valarray": "cpp"
+  }
 }
