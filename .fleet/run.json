@@ -1,0 +1,11 @@
+{
+    "configurations": [
+
+{
+    "type": "command",
+    "name": "a",
+    "program": "d",
+},
+        
+    ]
+}
