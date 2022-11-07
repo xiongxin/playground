@@ -105,6 +105,42 @@ vector<T, A>::vector(const vector<T, A> &a)
   std::uninitialized_copy(a.begin(), a.end(), vb.elem);
 }
 
+/*
+这个版本有严重的性能问题：
+1）每次都重新分配新的内存，释放旧的内存，即使在旧的内存能够hold住需要复制的数据的时候
+template <class T, class A>
+vector<T, A> &vector<T, A>::operator=(const vector<T, A> &a) {
+  vector tmp{a};
+  std::move(*this,
+            tmp); // 复制构造的一个重点任务就是清理老数据
+                  // 这里会调用我们定义好的 move constructor/assignment
+                  // 将我们的vb置换到tmp里面取，然后利用
+                  // tmp的特性，及时的析构掉资源 将我们老的数据清理掉
+
+  return *this;
+}
+*/
+template <class T, class A>
+vector<T, A> &vector<T, A>::operator=(const vector<T, A> &a) {
+  if (capacity() < a.size()) { // 如果资源不够才复制释放
+    vector tmp{a};
+    std::move(*this,
+              tmp); // 复制构造的一个重点任务就是清理老数据
+                    // 这里会调用我们定义好的 move constructor/assignment
+                    // 将我们的vb置换到tmp里面取，然后利用
+                    // tmp的特性，及时的析构掉资源 将我们老的数据清理掉
+
+    return *this;
+  }
+
+  if (this == &a) // optimize self assignment
+    return *this;
+
+  size_type sz = size();
+  size_type asz = a.size();
+  vb.alloc = a.vb.alloc; // copy the allocator
+}
+
 template <class T, class A>
 vector<T, A>::vector(vector &&a) // move constructor
     : vb{std::move(a.vb)}        // transfer ownership
