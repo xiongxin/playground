@@ -1,0 +1,9 @@
+*.la
+*.lo
+*.o
+*.s
+*~
+.gitignore~
+.libs
+dest
+hello[0-9]

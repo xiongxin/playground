@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "iostream": "cpp",
-        "stdexcept": "cpp",
-        "initializer_list": "cpp",
-        "memory": "cpp"
-    }
-}
