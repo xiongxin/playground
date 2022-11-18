@@ -1,3 +1,6 @@
 extern int i;
-
-void test(void) { i = 100; }
+extern int j;
+void test(void) {
+  i = 100;
+  i = j + 100;
+}
