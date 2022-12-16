@@ -1,0 +1,1 @@
+cmd_/home/xiongxin/Data/Code/playground/linux/lkmpg/hello/Module.symvers := sed 's/ko$$/o/' /home/xiongxin/Data/Code/playground/linux/lkmpg/hello/modules.order | scripts/mod/modpost    -o /home/xiongxin/Data/Code/playground/linux/lkmpg/hello/Module.symvers -e -i Module.symvers   -T -

@@ -50,7 +50,8 @@
     "istream": "cpp",
     "ratio": "cpp",
     "semaphore": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "cstring": "cpp"
   },
   "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools"
 }

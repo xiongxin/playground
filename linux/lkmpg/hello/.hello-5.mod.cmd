@@ -1,0 +1,1 @@
+cmd_/home/xiongxin/Data/Code/playground/linux/lkmpg/hello/hello-5.mod := printf '%s\n'   hello-5.o | awk '!x[$$0]++ { print("/home/xiongxin/Data/Code/playground/linux/lkmpg/hello/"$$0) }' > /home/xiongxin/Data/Code/playground/linux/lkmpg/hello/hello-5.mod

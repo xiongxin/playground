@@ -1,0 +1,1 @@
+cmd_/home/xiongxin/Data/Code/playground/linux/lkmpg/hello/hello-5.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/xiongxin/Data/Code/playground/linux/lkmpg/hello/hello-5.ko /home/xiongxin/Data/Code/playground/linux/lkmpg/hello/hello-5.o /home/xiongxin/Data/Code/playground/linux/lkmpg/hello/hello-5.mod.o;  true

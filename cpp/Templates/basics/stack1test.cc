@@ -3,10 +3,11 @@
 #include <string>
 
 int main() {
-  Stack<int> intStack;
-  Stack<std::string> stringStack;
-  // stack of ints
-  // stack of strings
+  Stack<int> intStack;            // stack of ints
+  Stack<std::string> stringStack; // stack of strings
+
+  std::cout << intStack.top() << '\n';
+
   // manipulate int stack
   intStack.push(7);
   std::cout << intStack.top() << '\n';

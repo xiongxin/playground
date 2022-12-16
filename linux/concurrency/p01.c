@@ -12,7 +12,6 @@ void printMsg(char *msg) {
 int main(int argc, char **argv) {
   pthread_t thrdID;
   int *status = malloc(sizeof(int));
-
   printf("creating a new thread\n");
   pthread_create(&thrdID, NULL, (void *)printMsg, "argv[1]");
   printf("created thread %d\n", thrdID);
@@ -21,3 +20,4 @@ int main(int argc, char **argv) {
 
   return 0;
 }
+
