@@ -1,6 +1,8 @@
 #lang racket
 
-(require "contracts.rkt")
+(require "cake.rkt")
+(require (submod "cake.rkt" extras))
 
-(deposit -10.2)
-(balance)
+(print-cake (random 30))
+
+(show "  ~a   " 10 #\])
