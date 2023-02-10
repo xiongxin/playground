@@ -8,6 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-std=c++23",
                 "-Wall",
+                "-fno-permissive",
                 "-g",
                 "${file}",
                 "${fileDirname}/src/*.cpp",
