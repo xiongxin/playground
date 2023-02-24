@@ -6,6 +6,8 @@
       "command": "/usr/bin/g++",
       "args": [
         "-fdiagnostics-color=always",
+        // "-fsanitize=address",
+        "-std=c++20",
         "-g",
         "${file}",
         "-o",
