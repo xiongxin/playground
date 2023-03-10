@@ -6,7 +6,8 @@
             "command": "/usr/bin/clang++",
             "args": [
                 "-fdiagnostics-color=always",
-                "-std=c++23",
+                "-fsanitize=address",
+                "-std=c++20",
                 "-Wall",
                 "-fno-permissive",
                 "-g",
