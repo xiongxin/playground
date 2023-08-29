@@ -6,7 +6,10 @@
             "command": "/usr/bin/clang++",
             "args": [
                 "-fdiagnostics-color=always",
+                "-fsanitize=address",
+                "-std=c++20",
                 "-Wall",
+                "-fno-permissive",
                 "-g",
                 "${file}",
                 "${fileDirname}/src/*.cpp",

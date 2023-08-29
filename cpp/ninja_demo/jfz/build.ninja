@@ -1,0 +1,27 @@
+ninja_require_version = 1.5
+
+# 变量
+GCC = /usr/bin/gcc
+cflags = -Wall
+
+
+# 编译规则，指定depfile，可以用于生成ninja_deps文件
+rule compile_jfz
+  command = $GCC -c $cflags -MD -MF $out.d $in -o $out
+  description = 编译 $in 成为 $out
+  depfile = $out.d
+  deps = gcc
+build jfz.o : compile_jfz src/jfz.c
+
+
+# 链接规则
+rule link_jfz
+  command = $GCC $DEFINES $INCLUDES $cflags $in -o $out
+  description = 链接 $in 成为 $out
+build jfz.exe : link_jfz jfz.o
+
+# 编译all，就是做任务build jfz.exe
+build all: phony jfz.exe
+
+# 默认编译什么(单独运行ninja)
+default all
