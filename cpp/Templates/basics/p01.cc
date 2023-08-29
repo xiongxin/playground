@@ -1,11 +1,16 @@
-template <typename T1, typename T2>
-auto max(T1 a, T2 b) -> decltype(b < a ? a : b) {
-  return b < a ? a : b;
-}
+template <typename T> class Base {
+public:
+  void bar();
+};
+
+template <typename T> class Derived : Base<T> {
+public:
+  void foo() {
+    this->bar(); // calls external bar() or error
+  }
+};
 
 int main(int argc, char const *argv[]) {
-  int a = 12;
-  int b = 14;
-  int c = ::max(a, b);
+  /* code */
   return 0;
 }
