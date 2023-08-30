@@ -1,0 +1,11 @@
+data/backtrack.c.i
+data/pike.c.i
+data/LICENSE.i
+data/compile.c.i
+data/Makefile.i
+data/parse.y.i
+data/sub.c.i
+data/thompson.c.i
+data/recursive.c.i
+data/regexp.h.i
+data/main.c.i

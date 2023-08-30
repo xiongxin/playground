@@ -1,0 +1,31 @@
+Start testing: Apr 04 16:10 CST
+----------------------------------------------------------
+4/10 Testing: Comp100
+4/10 Test: Comp100
+Command: "/home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step5_build/Tutorial" "100"
+Directory: /home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step5_build
+"Comp100" start time: Apr 04 16:10 CST
+Output:
+----------------------------------------------------------
+Computing sqrt of 100 to be 50.5
+Computing sqrt of 100 to be 26.2401
+Computing sqrt of 100 to be 15.0255
+Computing sqrt of 100 to be 10.8404
+Computing sqrt of 100 to be 10.0326
+Computing sqrt of 100 to be 10.0001
+Computing sqrt of 100 to be 10
+Computing sqrt of 100 to be 10
+Computing sqrt of 100 to be 10
+Computing sqrt of 100 to be 10
+The square root of 100 is 10
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Fail Reason:
+Required regular expression not found. Regex=[41112 233
+]
+"Comp100" end time: Apr 04 16:10 CST
+"Comp100" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 04 16:10 CST

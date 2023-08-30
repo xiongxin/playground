@@ -1,0 +1,5 @@
+a.o : a.c
+all : a.o all.o b.o
+all.o : all.c
+b.o : b.c
+clean :

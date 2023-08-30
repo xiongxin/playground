@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step2/build",
+  "command": "/usr/bin/g++ -I/home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step2/build -I/home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step2/MathFunctions -g -std=gnu++11 -o CMakeFiles/Tutorial.dir/tutorial.cxx.o -c /home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step2/tutorial.cxx",
+  "file": "/home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step2/tutorial.cxx",
+  "output": "CMakeFiles/Tutorial.dir/tutorial.cxx.o"
+},
+{
+  "directory": "/home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step2/build",
+  "command": "/usr/bin/g++ -g -std=gnu++11 -o MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.o -c /home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step2/MathFunctions/mysqrt.cxx",
+  "file": "/home/xiongxin/Data/Code/playground/cmake/cmake-3.26.2-tutorial-source/Step2/MathFunctions/mysqrt.cxx",
+  "output": "MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.o"
+}
+]

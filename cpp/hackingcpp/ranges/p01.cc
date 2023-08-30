@@ -1,19 +1,29 @@
-// This example demonstrates filtering and transforming a range on the
-// fly with view adaptors.
-
 #include <iostream>
-#include <range/v3/view/filter.hpp>
-#include <range/v3/view/transform.hpp>
+#include <range/v3/all.hpp>
+#include <range/v3/range/conversion.hpp>
 #include <string>
-#include <vector>
 
-using std::cout;
+auto print_subrange = [](std::ranges::viewable_range auto &&r) {
+  std::cout << "[";
+  for (int pos{}; auto elem : r)
+    std::cout << (pos++ ? " " : "") << elem;
+  std::cout << "] ";
+};
 
 int main() {
-  std::vector<int> const vi{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   using namespace ranges;
-  auto rng = vi | views::filter([](int i) { return i % 2 == 0; }) |
-             views::transform([](int i) { return std::to_string(i); });
-  // prints: [2,4,6,8,10]
-  cout << rng << '\n';
+
+  std::vector<char> input{'a', 'b', 'c', 'd', 'e'};
+  auto result =
+      input | views::sliding(2) | views::join | ranges::to<std::string>();
+  std::cout << result << '\n';
+
+  const auto v = {1, 2, 3, 4, 5, 6};
+
+  for (const unsigned width : views::iota(1U, 1U + v.size())) {
+    auto const windows = v | views::sliding(width);
+    std::cout << "All sliding windows of width " << width << ": ";
+    ranges::for_each(windows, print_subrange);
+    std::cout << '\n';
+  }
 }

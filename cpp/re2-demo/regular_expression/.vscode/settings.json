@@ -1,0 +1,9 @@
+{
+  "makefile.launchConfigurations": [
+    {
+      "cwd": "/home/xiongxin/Data/Code/playground/cpp/re2-demo/regular_expression",
+      "binaryPath": "/home/xiongxin/Data/Code/playground/cpp/re2-demo/regular_expression/main",
+      "binaryArgs": []
+    }
+  ]
+}

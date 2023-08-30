@@ -1,0 +1,4 @@
+/home/xiongxin/Data/Code/playground/cmake/lib/libMathFunctions.a
+/home/xiongxin/Data/Code/playground/cmake/include/MathFunctions.h
+/home/xiongxin/Data/Code/playground/cmake/bin/Tutorial
+/home/xiongxin/Data/Code/playground/cmake/include/TutorialConfig.h
