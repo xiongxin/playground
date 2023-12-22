@@ -1,0 +1,221 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.18 of Day Month 20?? (rev: c553ff4)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 81 and seed -3223986740607148782 with 4 workers on 8 cores with 1166MB heap and 2621MB offheap memory [pid: 145632] (Linux 6.6.3-100.fc38.x86_64 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/xiongxin/Data/Codes/playground/tla+/find_duplicates.toolbox/Model_1/MC.tla
+Parsing file /home/xiongxin/Data/Codes/playground/tla+/find_duplicates.toolbox/Model_1/find_duplicates.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/TLC.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/Integers.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/Sequences.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/Naturals.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module find_duplicates
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-12-21 19:42:05)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 16 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 32 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 64 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 128 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 256 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 512 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 1024 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2048 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4096 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8192 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 10000 distinct states generated at 2023-12-21 19:42:06.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant inv_170315892486510000 is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ index = 1
+/\ seen = {}
+/\ seq = <<1, 1, 1, 1>>
+/\ pc = "Iterate"
+/\ is_unique = TRUE
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Iterate line 51, col 12 to line 62, col 24 of module find_duplicates>
+/\ index = 2
+/\ seen = {1}
+/\ seq = <<1, 1, 1, 1>>
+/\ pc = "Iterate"
+/\ is_unique = TRUE
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Iterate line 51, col 12 to line 62, col 24 of module find_duplicates>
+/\ index = 3
+/\ seen = {1}
+/\ seq = <<1, 1, 1, 1>>
+/\ pc = "Iterate"
+/\ is_unique = FALSE
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-12-21 19:42:06
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 44, col 1 to line 44, col 4 of module find_duplicates>: 60000:60000
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  line 45, col 20 to line 45, col 35 of module find_duplicates: 6:240000
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 45, col 20 to line 45, col 20 of module find_duplicates: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 45, col 25 to line 45, col 25 of module find_duplicates: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 45, col 30 to line 45, col 30 of module find_duplicates: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 45, col 35 to line 45, col 35 of module find_duplicates: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 12 to line 47, col 20 of module find_duplicates: 60000
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 48, col 12 to line 48, col 27 of module find_duplicates: 60000
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 12 to line 49, col 25 of module find_duplicates: 60000
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Iterate line 51, col 1 to line 51, col 7 of module find_duplicates>: 10004:10014
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 15 to line 51, col 28 of module find_duplicates: 20024
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 51, col 15 to line 51, col 16 of module find_duplicates: 10014
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 18 to line 52, col 34 of module find_duplicates: 10014
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 53, col 29 to line 53, col 50 of module find_duplicates: 10014
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 37 to line 54, col 70 of module find_duplicates: 10005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 37 to line 55, col 55 of module find_duplicates: 10005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 37 to line 56, col 54 of module find_duplicates: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 56, col 50 to line 56, col 54 of module find_duplicates: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 37 to line 57, col 48 of module find_duplicates: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 57, col 45 to line 57, col 48 of module find_duplicates: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 58, col 26 to line 58, col 43 of module find_duplicates: 10010
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 58, col 35 to line 58, col 43 of module find_duplicates: 10014
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 59, col 26 to line 59, col 40 of module find_duplicates: 10010
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 60, col 26 to line 60, col 37 of module find_duplicates: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 61, col 26 to line 61, col 63 of module find_duplicates: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 15 to line 62, col 24 of module find_duplicates: 10010
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 22 to line 62, col 24 of module find_duplicates: 10014
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 65, col 1 to line 65, col 11 of module find_duplicates>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 16 to line 65, col 26 of module find_duplicates: 10000
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 31 to line 65, col 44 of module find_duplicates: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<inv_170315892486510000 line 5, col 1 to line 5, col 22 of module MC>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 16 of module MC: 20004
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(3) at 2023-12-21 19:42:06: 20,004 states generated (752,501 s/min), 20,004 distinct states found (752,501 ds/min), 9,996 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+20004 states generated, 20004 distinct states found, 9996 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 3.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1601ms at (2023-12-21 19:42:06)
+@!@!@ENDMSG 2186 @!@!@
