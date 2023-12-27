@@ -1,7 +1,9 @@
 ---- MODULE find_duplicates ----
-EXTENDS Integers, Sequences, TLC
+EXTENDS Integers, Sequences, TLC, FiniteSets
 
 CONSTANT S
+
+ASSUME Cardinality(S) >= 4
 
 (*--algorithm dup
 variable 
