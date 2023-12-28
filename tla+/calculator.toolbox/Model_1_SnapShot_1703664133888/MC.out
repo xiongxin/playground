@@ -1,0 +1,167 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.18 of Day Month 20?? (rev: c553ff4)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 70 and seed 890268474097676037 with 4 workers on 8 cores with 1166MB heap and 2621MB offheap memory [pid: 114775] (Linux 6.6.7-100.fc38.x86_64 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/xiongxin/Data/Codes/playground/tla+/calculator.toolbox/Model_1/MC.tla
+Parsing file /home/xiongxin/Data/Codes/playground/tla+/calculator.toolbox/Model_1/calculator.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/TLC.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/Integers.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/Naturals.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/Sequences.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module calculator
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-12-27 16:02:11)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-12-27 16:02:12.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant Invariant is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ sum = 0
+/\ i = 0
+/\ pc = "Calculator"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Calculator line 51, col 15 to line 60, col 50 of module calculator>
+/\ sum = 1
+/\ i = 1
+/\ pc = "Calculator"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Calculator line 51, col 15 to line 60, col 50 of module calculator>
+/\ sum = 10
+/\ i = 2
+/\ pc = "Calculator"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Calculator line 51, col 15 to line 60, col 50 of module calculator>
+/\ sum = 60
+/\ i = 3
+/\ pc = "Calculator"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Calculator line 51, col 15 to line 60, col 50 of module calculator>
+/\ sum = 420
+/\ i = 4
+/\ pc = "Calculator"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <Calculator line 51, col 15 to line 60, col 50 of module calculator>
+/\ sum = 417
+/\ i = 5
+/\ pc = "Calculator"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-12-27 16:02:12
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 46, col 1 to line 46, col 4 of module calculator>: 3:3
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 9 to line 49, col 28 of module calculator: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Calculator line 51, col 1 to line 51, col 10 of module calculator>: 16549:64281
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 18 to line 51, col 34 of module calculator: 25787
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 51, col 18 to line 51, col 19 of module calculator: 16559
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 21 to line 52, col 33 of module calculator: 9229
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 34 to line 54, col 50 of module calculator: 18984
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 37 to line 55, col 50 of module calculator: 18983
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 55, col 44 to line 55, col 50 of module calculator: 18984
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 34 to line 56, col 50 of module calculator: 18983
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 53, col 38 to line 53, col 43 of module calculator: 1899
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 29 to line 57, col 38 of module calculator: 56950
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 57, col 34 to line 57, col 38 of module calculator: 56951
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 58, col 29 to line 58, col 46 of module calculator: 56950
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 59, col 29 to line 59, col 40 of module calculator: 7330
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 60, col 29 to line 60, col 50 of module calculator: 7330
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 63, col 1 to line 63, col 11 of module calculator>: 0:7330
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 16 to line 63, col 26 of module calculator: 23878
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 63, col 16 to line 63, col 17 of module calculator: 16548
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 31 to line 63, col 44 of module calculator: 7330
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<Invariant line 41, col 1 to line 41, col 9 of module calculator>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 14 to line 41, col 25 of module calculator: 16550
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(7) at 2023-12-27 16:02:12: 71,312 states generated (2,369,169 s/min), 16,550 distinct states found (549,833 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+71312 states generated, 16550 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 7.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1819ms at (2023-12-27 16:02:12)
+@!@!@ENDMSG 2186 @!@!@

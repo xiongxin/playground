@@ -6,6 +6,7 @@
     <intAttribute key="distributedNodesCount" value="1"/>
     <stringAttribute key="distributedTLC" value="off"/>
     <intAttribute key="fpIndex" value="48"/>
+    <intAttribute key="fpIndex" value="122"/>
     <intAttribute key="maxHeapSize" value="25"/>
     <stringAttribute key="modelBehaviorInit" value=""/>
     <stringAttribute key="modelBehaviorNext" value=""/>
@@ -18,6 +19,7 @@
     <listAttribute key="modelCorrectnessProperties"/>
     <intAttribute key="modelEditorOpenTabs" value="8"/>
     <stringAttribute key="modelExpressionEval" value="[p, q \in BOOLEAN |-&gt; p =&gt; q]"/>
+    <stringAttribute key="modelExpressionEval" value="DOMAIN &lt;&lt;&quot;A&quot;,&quot;B&quot;&gt;&gt;"/>
     <listAttribute key="modelParameterConstants"/>
     <intAttribute key="modelVersion" value="20191005"/>
     <intAttribute key="numberOfWorkers" value="4"/>
