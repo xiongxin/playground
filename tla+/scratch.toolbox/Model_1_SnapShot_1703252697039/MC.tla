@@ -2,14 +2,14 @@
 EXTENDS scratch, TLC
 
 \* Constant expression definition @modelExpressionEval
-const_expr_170297652157125000 == 
-Head(S)
+const_expr_17032526959863000 == 
+[p, q \in BOOLEAN |-> p => q]
 ----
 
 \* Constant expression ASSUME statement @modelExpressionEval
-ASSUME PrintT(<<"$!@$!@$!@$!@$!",const_expr_170297652157125000>>)
+ASSUME PrintT(<<"$!@$!@$!@$!@$!",const_expr_17032526959863000>>)
 ----
 
 =============================================================================
 \* Modification History
-\* Created Tue Dec 19 17:02:01 CST 2023 by xiongxin
+\* Created Fri Dec 22 21:44:55 CST 2023 by xiongxin

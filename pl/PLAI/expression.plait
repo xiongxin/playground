@@ -1,0 +1,90 @@
+#lang plait
+
+(define-type Exp
+  [numE (n : Number)]
+  [boolE (b : Boolean)]
+  [plusE (left : Exp) (right : Exp)]
+  [varE (name : Symbol)]
+  [let1E (var : Symbol)
+         (value : Exp)
+         (body : Exp)]
+  [lamE (var : Symbol) (body : Exp)]
+  [appE (fun : Exp) (arg : Exp)]
+  [cndE (test : Exp) (then : Exp) (else : Exp)])
+
+
+(define-type-alias Env (Hashof Symbol Value))
+(define mt-env (hash empty)) ;; "empty environment"
+
+(define (lookup (s : Symbol) (n : Env))
+  (type-case (Optionof Value) (hash-ref n s)
+    [(none) (error s "not bound")]
+    [(some v) v]))
+
+(extend : (Env Symbol Value -> Env))
+(define (extend old-env new-name value)
+  (hash-set old-env new-name value))
+
+(define-type Value
+  [numV (the-number : Number)]
+  [boolV (the-boolean : Boolean)]
+  [funV (var : Symbol) (body : Exp) (nv : Env)])
+
+(interp : (Exp Env -> Value))
+
+(define (interp e nv)
+  (type-case Exp e
+    [(numE n) (numV n)]
+    [(boolE b) (boolV b)]
+    [(plusE l r) (add (interp l nv) (interp r nv))]
+    [(lamE v b) (funV v b nv)]
+    [(appE f a) (let ([fv (interp f nv)]
+                      [av (interp a nv)])
+                  (type-case Value fv
+                    [(funV v b nv)
+                     (interp b (extend nv v av))]
+                    [else (error 'app "didn't get a function")]))]
+    [(varE s) (lookup s nv)]
+    [(let1E var val body)
+     (let ([new-env (extend nv
+                            var
+                            (interp val nv))])
+       (interp body new-env))]
+    [(cndE c t e) (if (boolean-decision (interp c nv))
+                      (interp t nv)
+                      (interp e nv))]))
+
+(define (boolean-decision v)
+  (type-case Value v
+    [(boolV b) b]
+    [else (error 'if "expects conditional to evaluate to a boolean")]))
+
+
+(define (add v1 v2)
+  (type-case Value v1
+    [(numV n1)
+     (type-case Value v2
+       [(numV n2) (numV (+ n1 n2))]
+       [else (error '+ "Expects RHS to be a number")])]
+    [else (error '+ "Expects LHS to be a number")]))
+
+
+
+(define (parse s)
+  (cond
+    [(s-exp-number? s)
+     (numE (s-exp->number s))]
+    [(s-exp-list? s)
+     (let ([l (s-exp->list s)])
+       (if (symbol=? '+
+                     (s-exp->symbol (first l)))
+           (plusE (parse (second l))
+                 (parse (third l)))
+           (error 'parse "list not an addition")))]))
+
+
+(test (interp (appE (let1E 'x (numE 3)
+                           (lamE 'y (plusE (varE 'x) (varE 'y))))
+                    (numE '4))
+              mt-env)
+      (numV 7))
