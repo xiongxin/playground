@@ -1,0 +1,255 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.18 of Day Month 20?? (rev: c553ff4)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 37 and seed -7966793257881273334 with 4 workers on 8 cores with 1166MB heap and 2621MB offheap memory [pid: 69362] (Linux 6.6.8-100.fc38.x86_64 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/xiongxin/Data/Codes/playground/tla+/threads.toolbox/Model_1/MC.tla
+Parsing file /home/xiongxin/Data/Codes/playground/tla+/threads.toolbox/Model_1/threads.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/TLC.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/Integers.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/Naturals.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/Sequences.tla
+Parsing file /home/xiongxin/Data/App/TLAToolbox-1.8.0-linux.gtk.x86_64/toolbox/plugins/org.lamport.tlatools_1.0.0.202312160604/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module Integers
+Semantic processing of module threads
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2024-01-11 20:39:24)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2024-01-11 20:39:25.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2112:1 @!@!@
+Action property CounterOnlyIncreases is violated.
+@!@!@ENDMSG 2112 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ counter = 0
+/\ lock = -1
+/\ pc = <<"GetLock", "GetLock">>
+/\ tmp = <<0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <GetLock(2) line 56, col 18 to line 60, col 48 of module threads>
+/\ counter = 0
+/\ lock = 2
+/\ pc = <<"GetLock", "GetCounter">>
+/\ tmp = <<0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <GetCounter(2) line 62, col 21 to line 65, col 52 of module threads>
+/\ counter = 0
+/\ lock = 2
+/\ pc = <<"GetLock", "IncCounter">>
+/\ tmp = <<0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <IncCounter(2) line 67, col 21 to line 70, col 48 of module threads>
+/\ counter = 1
+/\ lock = 2
+/\ pc = <<"GetLock", "ReleaseLock">>
+/\ tmp = <<0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <ReleaseLock(2) line 72, col 22 to line 75, col 52 of module threads>
+/\ counter = 1
+/\ lock = -1
+/\ pc = <<"GetLock", "Done">>
+/\ tmp = <<0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <GetLock(1) line 56, col 18 to line 60, col 48 of module threads>
+/\ counter = 1
+/\ lock = 1
+/\ pc = <<"GetCounter", "Done">>
+/\ tmp = <<0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <GetCounter(1) line 62, col 21 to line 65, col 52 of module threads>
+/\ counter = 1
+/\ lock = 1
+/\ pc = <<"IncCounter", "Done">>
+/\ tmp = <<1, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <IncCounter(1) line 67, col 21 to line 70, col 48 of module threads>
+/\ counter = 0
+/\ lock = 1
+/\ pc = <<"ReleaseLock", "Done">>
+/\ tmp = <<1, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2024-01-11 20:39:25
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 49, col 1 to line 49, col 4 of module threads>: 4:4
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 12 to line 51, col 22 of module threads: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  line 53, col 18 to line 53, col 41 of module threads: 4:8
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 53, col 28 to line 53, col 34 of module threads: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 12 to line 54, col 48 of module threads: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |line 54, col 17 to line 54, col 48 of module threads: 4:8
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 54, col 27 to line 54, col 33 of module threads: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<GetLock line 56, col 1 to line 56, col 13 of module threads>: 4:12
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 21 to line 56, col 40 of module threads: 69
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 56, col 21 to line 56, col 28 of module threads: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 21 to line 57, col 31 of module threads: 36
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 57, col 21 to line 57, col 24 of module threads: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 57, col 28 to line 57, col 31 of module threads: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 58, col 21 to line 58, col 32 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 59, col 21 to line 59, col 60 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 60, col 21 to line 60, col 48 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<GetCounter line 62, col 1 to line 62, col 16 of module threads>: 4:10
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 24 to line 62, col 46 of module threads: 61
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 24 to line 62, col 31 of module threads: 51
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 24 to line 63, col 60 of module threads: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 24 to line 64, col 63 of module threads: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 24 to line 65, col 52 of module threads: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<IncCounter line 67, col 1 to line 67, col 16 of module threads>: 4:10
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 24 to line 67, col 46 of module threads: 53
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 67, col 24 to line 67, col 31 of module threads: 45
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 24 to line 68, col 79 of module threads: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 68, col 36 to line 68, col 78 of module threads: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 68, col 36 to line 68, col 44 of module threads: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 68, col 48 to line 68, col 78 of module threads: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 68, col 51 to line 68, col 63 of module threads: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 68, col 77 to line 68, col 78 of module threads: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 24 to line 69, col 64 of module threads: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 69, col 30 to line 69, col 64 of module threads: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 24 to line 70, col 48 of module threads: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ReleaseLock line 72, col 1 to line 72, col 17 of module threads>: 2:5
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 72, col 25 to line 72, col 48 of module threads: 42
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 72, col 25 to line 72, col 32 of module threads: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 73, col 25 to line 73, col 36 of module threads: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 25 to line 74, col 58 of module threads: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 25 to line 75, col 52 of module threads: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 81, col 1 to line 81, col 11 of module threads>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 40 to line 81, col 56 of module threads: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 31 to line 81, col 37 of module threads: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 82, col 19 to line 82, col 32 of module threads: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(8) at 2024-01-11 20:39:25: 15 states generated (815 s/min), 15 distinct states found (815 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+15 states generated, 15 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 8.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1109ms at (2024-01-11 20:39:25)
+@!@!@ENDMSG 2186 @!@!@

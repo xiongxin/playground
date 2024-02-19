@@ -15,6 +15,7 @@ begin
     queue := Append(queue, self);
 end process;
 
+
 process reader = 0
 begin
   ReadFromQueue:
@@ -23,6 +24,8 @@ begin
       queue := Tail(queue);
     goto ReadFromQueue;
 end process;
+
+
 end algorithm; *)
 \* BEGIN TRANSLATION (chksum(pcal) = "c110395b" /\ chksum(tla) = "20ad8683")
 VARIABLES queue, total, pc
@@ -68,5 +71,5 @@ Termination == <>(\A self \in ProcSet: pc[self] = "Done")
 \* END TRANSLATION 
 ====
 \* Modification History
-\* Last modified Wed Dec 27 17:19:13 CST 2023 by xiongxin
+\* Last modified Thu Jan 04 10:51:22 CST 2024 by xiongxin
 \* Created Wed Dec 27 16:13:32 CST 2023 by xiongxin
