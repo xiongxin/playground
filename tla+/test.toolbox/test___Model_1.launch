@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
-    <stringAttribute key="configurationName" value="Model_1_SnapShot_1703252697039"/>
-    <stringAttribute key="configurationName" value="Model_1_SnapShot_1703237461187"/>
+    <stringAttribute key="configurationName" value="Model_1"/>
     <intAttribute key="distributedFPSetCount" value="0"/>
     <stringAttribute key="distributedNetworkInterface" value="192.168.1.101"/>
     <intAttribute key="distributedNodesCount" value="1"/>
     <stringAttribute key="distributedTLC" value="off"/>
-    <intAttribute key="fpIndex" value="48"/>
-    <intAttribute key="fpIndex" value="122"/>
+    <intAttribute key="fpIndex" value="88"/>
     <intAttribute key="maxHeapSize" value="25"/>
     <stringAttribute key="modelBehaviorInit" value=""/>
     <stringAttribute key="modelBehaviorNext" value=""/>
@@ -19,12 +17,11 @@
     <listAttribute key="modelCorrectnessInvariants"/>
     <listAttribute key="modelCorrectnessProperties"/>
     <intAttribute key="modelEditorOpenTabs" value="8"/>
-    <stringAttribute key="modelExpressionEval" value="[p, q \in BOOLEAN |-&gt; p =&gt; q]"/>
-    <stringAttribute key="modelExpressionEval" value="DOMAIN &lt;&lt;&quot;A&quot;,&quot;B&quot;&gt;&gt;"/>
+    <stringAttribute key="modelExpressionEval" value=""/>
     <listAttribute key="modelParameterConstants"/>
     <intAttribute key="modelVersion" value="20191005"/>
     <intAttribute key="numberOfWorkers" value="4"/>
     <stringAttribute key="result.mail.address" value=""/>
-    <stringAttribute key="specName" value="scratch"/>
+    <stringAttribute key="specName" value="test"/>
     <stringAttribute key="tlcResourcesProfile" value="local custom"/>
 </launchConfiguration>
